@@ -1,0 +1,68 @@
+package com.methods.java;
+
+import javax.swing.*;
+
+public class method1 {
+    public static void main(String[] args) {
+       String hehe=JOptionPane.showInputDialog("enter your first no."); //entry point for no. 1
+        String old=JOptionPane.showInputDialog("enter your 2nd no. "); //entry point for no. 2
+
+        int a1=Integer.parseInt(hehe); //converting string to int
+        int a2=Integer.parseInt(old);//converting string to int
+
+        double avg=ashu(a1,a2, 3); //including method ashu
+
+        System.out.println(avg); //prinitng average ( avg=(a+b)/2.0; )
+
+        String fluname= ioname(JOptionPane.showInputDialog("enter surname"),
+
+                JOptionPane.showInputDialog("enter name")); //entry of name
+
+        System.out.println(fluname); //printing full name
+        System.out.println("\n");
+
+        String ol=JOptionPane.showInputDialog("Enter a number betwween 1 to 100"); //boolean entry
+
+        int n=Integer.parseInt(ol); //converting entry to int
+
+        if ( newsl(n)) {
+           JOptionPane.showMessageDialog(null, "right number");
+        }
+        else                                         //printing statement
+        {
+            JOptionPane.showMessageDialog(null, " wrong number" +
+                    "");
+        }
+
+
+    }
+
+
+    public
+    static double ashu(int a, int b, int c) { //public method [type- return]
+
+double avg=(a+b)/2.0;
+return avg;
+    }
+
+
+    public static String ioname(String surname, String name) //public method [type- return]
+    {
+        final String flname="Name:  "+name + "\n" + "Surname:  " + surname;
+        return flname;
+    }
+
+    /**
+     * This method determines if the no. is >= 1 or <= 100
+     * @param n it stores the number
+     * @return it return the boolean state acc to the no. provided
+     */
+    public static boolean newsl( int n) //public method [type- return]
+    {
+        boolean sts;
+        return  (n > 1 && n < 100); }
+
+
+        }
+
+
